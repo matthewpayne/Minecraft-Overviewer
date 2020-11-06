@@ -355,6 +355,8 @@ def handlePlayers(worldpath, filters, markers):
             spawn["x"] = data['SpawnX']
             spawn["y"] = data['SpawnY']
             spawn["z"] = data['SpawnZ']
+            if useUUIDs:
+                spawn['uuid'] = playername            
 
         for name, __, filter_function, rset, __, __ in filters:
             # get the dimension for the filter
